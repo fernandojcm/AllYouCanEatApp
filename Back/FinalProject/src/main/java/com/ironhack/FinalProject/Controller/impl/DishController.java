@@ -31,10 +31,8 @@ public class DishController implements IDishController {
     @GetMapping("/dishes/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Dish> getDishById(@PathVariable Integer id) {
-
         return dishService.findDishById(id);
     }
-
 
     @GetMapping("/dishes/allergen/{allergen}")
     @ResponseStatus(HttpStatus.OK)
@@ -48,7 +46,7 @@ public class DishController implements IDishController {
         return dishService.findDishByRestaurant(restaurant);
     }
 
-    @PostMapping("/create")
+    @PostMapping("/dishes/dish/created")
     @ResponseStatus(HttpStatus.CREATED)
     public void createDish(@RequestBody @Valid DishDTO dishDTO){
         dishService.createDish(dishDTO);
@@ -63,7 +61,7 @@ public class DishController implements IDishController {
 
     @DeleteMapping("/dishes/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void  delete(@PathVariable Integer id){
+    public void  deleteDish(@PathVariable Integer id){
         dishRepository.deleteById(id);
     }
 }

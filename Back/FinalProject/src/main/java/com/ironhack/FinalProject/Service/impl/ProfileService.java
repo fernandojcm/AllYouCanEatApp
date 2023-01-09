@@ -2,6 +2,7 @@ package com.ironhack.FinalProject.Service.impl;
 
 import com.ironhack.FinalProject.Class.Classes.Allergen;
 import com.ironhack.FinalProject.Class.Models.Profile;
+import com.ironhack.FinalProject.Controller.dto.ProfileDTO;
 import com.ironhack.FinalProject.Repository.ProfileRepository;
 import com.ironhack.FinalProject.Service.interfaces.IProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,25 @@ public class ProfileService implements IProfileService {
         }
     }
 
+    public List<Profile> findProfileByAllergen(String allergen){
+
+        try{
+            return profileRepository.findByAllergen(Allergen.valueOf(allergen.toUpperCase()));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Sorry, we don't have information for this ingredient.");
+        }
+    }
+
+    public void createProfile(ProfileDTO profileDTO){
+
+        Allergen allergen = Allergen.valueOf(profileDTO.getAllergen().toUpperCase());
+
+        String name = profileDTO.getName();
+
+        String password = profileDTO.getPassword();
+
+        Profile profile = new Profile(name, password, allergen);
+        profileRepository.save(profile);
+    }
 }

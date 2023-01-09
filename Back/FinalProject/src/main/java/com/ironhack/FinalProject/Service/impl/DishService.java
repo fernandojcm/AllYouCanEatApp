@@ -44,7 +44,7 @@ public class DishService implements IDishService {
             return dishRepository.findByAllergen(Allergen.valueOf(allergen.toUpperCase()));
         }catch (Exception e){
             System.out.println(e.getMessage());
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Sorry, we don't have information for this allergen.");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Sorry, we don't have information for this ingredient.");
         }
 
     }
