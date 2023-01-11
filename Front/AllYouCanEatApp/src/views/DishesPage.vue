@@ -5,9 +5,14 @@
     <div v-if="dishes" v-for="dish in dishes" :key="dish.id">
       
         <RouterLink :to="`/dishes/${dish.id}`">
-        <h3>{{ dish.name }}</h3>
+            <h3>{{ dish.name }}</h3>
         </RouterLink>
 
+    </div>
+    <div>
+        <RouterLink to="/dishes/dish/created">
+            <p>¿Quieres compartir un plato nuevo?</p>
+        </RouterLink>
     </div>
 </div>
 
@@ -16,6 +21,7 @@
 <script>
 import { mapState, mapActions } from "pinia";
 import { useDishesStore } from "../stores/counter.js";
+import CreateDishComponent from "../components/CreateDishComponent.vue";
  
 export default {  
   data() {

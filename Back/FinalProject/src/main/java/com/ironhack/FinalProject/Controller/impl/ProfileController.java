@@ -22,24 +22,28 @@ public class ProfileController implements IProfileController {
     @Autowired
     ProfileService profileService;
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/profiles")
     @ResponseStatus(HttpStatus.OK)
     public List<Profile> getProfiles(){
         return profileRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/profiles/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Profile> getProfileById(@PathVariable Integer id) {
         return profileService.findProfileById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/profiles/allergen/{allergen}")
     @ResponseStatus(HttpStatus.OK)
     public List<Profile> getProfileByAllergen(@PathVariable String allergen){
         return profileService.findProfileByAllergen(allergen);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/profiles/profile/created")
     @ResponseStatus(HttpStatus.CREATED)
     public void createProfile(@RequestBody @Valid ProfileDTO profileDTO){
