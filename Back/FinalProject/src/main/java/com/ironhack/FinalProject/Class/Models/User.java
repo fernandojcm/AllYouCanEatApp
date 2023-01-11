@@ -1,5 +1,6 @@
 package com.ironhack.FinalProject.Class.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public abstract class User {
 
     private String name;
 
+    @JsonIgnore
     private String password;
 
 

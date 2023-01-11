@@ -36,9 +36,7 @@ export default {
     this.fetchAll();
     
     console.log(this.anotherVar);
-    // const response = await fetch("https://ih-countries-api.herokuapp.com/countries")
-    // const countriesFetch = await response.json()
-    // this.countriesFetch = countriesFetch
+    
   }
 }
 </script>

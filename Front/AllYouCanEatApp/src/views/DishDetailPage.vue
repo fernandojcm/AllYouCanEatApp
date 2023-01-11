@@ -3,7 +3,10 @@
 <div v-if="dish" :key="dish.id">
 
     <h3>{{ dish.name }}</h3>
-
+    <p>Estos son los ingredientes:</p>
+    <p>{{ dish.recipe }}</p>
+    <p v-if="dish.restaurant">Y lo preparan en este restaurant:</p>
+    <p>{{ dish.restaurant }}</p>
 
 </div>
 </template>

@@ -16,7 +16,7 @@ import DishDetailPage from '../views/DishDetailPage.vue'
       component: DishesPage
     },
     {
-      path: '/dishes/id',
+      path: '/dishes/:id',
       name: 'dish',
       component: DishDetailPage
     }
