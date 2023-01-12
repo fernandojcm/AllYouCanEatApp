@@ -1,12 +1,15 @@
 <template>
 <HeaderComponent></HeaderComponent>
+<h3>Comparte un nuevo plato</h3>
 
-    <div>
-        <h3>Comparte un nuevo plato</h3>
+    
+        
      
         <form @submit.prevent="handleSubmit">
-    
-            <select v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos" required>
+
+          <div class="form-group">
+            <label for="allergens">Selecciona una alergia</label>
+            <select class="form-control" v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos" required>
                 <option disabled>Selecciona un alérgeno</option>
                 <option value="gluten">Gluten</option>
                 <option value="lactose">Lactosa</option>
@@ -15,22 +18,29 @@
                 <option value="eggs">Huevo</option>
              </select>
              <br>
+            </div>
     
-          <label>Nombre:</label>
+          <div class="form-group">  
+          <label>¿Cómo lo llamarías?</label>
           <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
           <br>
+          </div>
 
-          <label>Ingredientes:</label>
+          <div class="form-group">
+          <label>¿Qué ingredientes lleva?</label>
           <textarea class="form-control" v-model="recipe" type="text" name="recipe" id="recipe" required/>
           <br>
+          </div>
 
-          <label>Restaurant:</label>
+          <div class="form-group">
+          <label>¿Lo preparan en algún restaurant? Dinos cuál...</label>
           <input class="form-control" v-model="restaurant" type="text" name="restaurant" id="restaurant" required/>
           <br>
+          </div>
      
           <button class="btn btn-primary" type="submit">Compartir</button>
         </form>
-      </div>
+      
     </template>
     
     <script>

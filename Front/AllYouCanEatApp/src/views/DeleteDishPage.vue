@@ -2,9 +2,12 @@
 <HeaderComponent></HeaderComponent>
 
 <form @submit.prevent="handleSubmit">
-    <label>ID:</label>
+    <div class="form-group">
+    <label>Indica el ID del plato que quieres eliminar</label>
     <input class="form-control" v-model="id" type="text" name="id" id="id" required/>
     <br>
+    </div>
+
     <button class="btn btn-primary" type="submit">Eliminar</button>
 </form>
 

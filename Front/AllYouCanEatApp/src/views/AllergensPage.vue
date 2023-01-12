@@ -1,16 +1,19 @@
 <template>
 <HeaderComponent></HeaderComponent>
 <h2>All You Can Eat</h2>
-<p>Selecciona un alérgeno que quieras evitar comer</p>
 
-<div>
-    <select v-model="selected">
+<div class="form-group">
+  <label for="allergens">Selecciona un alérgeno que quieras evitar comer</label>
+    <select class="form-control" v-model="selected">
   <option  v-for="allergen in allergens" :value="allergen.value">
     {{ allergen.text }}
   </option>
 </select>
-<button class="btn btn-outline-primary" @click="showDishes">Mostrar</button>
+<br>
 </div>
+
+<button class="btn btn-outline-primary" @click="showDishes">Mostrar</button>
+
 
 <div v-if="dishes" v-for="dish in dishes" :key="dish.id">      
         <RouterLink :to="`/dishes/${dish.id}`">
@@ -66,7 +69,7 @@ export default {
     // Use pinia store method    
     //this.fetchAll();
     
-    console.log(this.anotherVar);
+    //console.log(this.anotherVar);
     
   }
 }

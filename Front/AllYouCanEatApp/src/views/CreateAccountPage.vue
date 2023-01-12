@@ -1,11 +1,12 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-    <div>
-        <h3>Crea un perfil nuevo</h3>
+<h3>Crea un perfil nuevo</h3>
+
+      
      
         <form @submit.prevent="handleSubmit">
-    
-            <select class="custom-select" v-model="allergen" name="allergens" id="allergens" required>
+          <div class="form-group">
+            <label for="allergens">¿A qué eres alérgico(a)?</label>
+            <select class="form-control" v-model="allergen" name="allergens" id="allergens" required>
                 <option disabled>¿A qué eres alérgico(a)?</option>
                 <option value="gluten">Gluten</option>
                 <option value="lactose">Lactosa</option>
@@ -14,18 +15,23 @@
                 <option value="eggs">Huevo</option>
              </select>
              <br>
+            </div>
     
-          <label>Nombre:</label>
+          <div class="form-group"> 
+          <label>Nombre de usuario:</label>
           <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
           <br>
+          </div>
      
-          <label>Password:</label>
+          <div class="form-group">
+          <label>Contraseña:</label>
           <input class="form-control" v-model="password" type="password" name="password" id="password" required/>
           <br>
+          </div>
      
           <button class="btn btn-primary" type="submit">Crear perfil</button>
         </form>
-      </div>
+      
     </template>
     
     <script>

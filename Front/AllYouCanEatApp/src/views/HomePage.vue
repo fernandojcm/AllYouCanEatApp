@@ -1,6 +1,6 @@
 <template>
 <HeaderComponent></HeaderComponent>    
-<h1>Welcome to All You Can Eat</h1>
+<h1>Bienvenido a All You Can Eat</h1>
 
 <div>
     <ul>

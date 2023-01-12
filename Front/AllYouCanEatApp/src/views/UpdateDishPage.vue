@@ -1,39 +1,50 @@
 <template>
 <HeaderComponent></HeaderComponent>
 
-<div>
+
 <form @submit.prevent="handleSubmit">
   
+  <div class="form-group">
   <label>ID:</label>
   <input class="form-control" v-model="id" type="text" name="id" id="id" required/>
-  <br>  
+  <br> 
+  </div> 
     
-    <select v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos" required>
-        <option disabled>Selecciona un alérgeno</option>
-        <option value="gluten">Gluten</option>
-        <option value="lactose">Lactosa</option>
-        <option value="seafood">Crustáceos y moluscos</option>
-        <option value="nuts">Frutos secos</option>
-        <option value="eggs">Huevo</option>
-     </select>
+  <div class="form-group">
+    <label for="allergens">Selecciona una alergia</label>
+    <select class="form-control" v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos" required>
+          <option disabled>Selecciona un alérgeno</option>
+          <option value="gluten">Gluten</option>
+          <option value="lactose">Lactosa</option>
+          <option value="seafood">Crustáceos y moluscos</option>
+          <option value="nuts">Frutos secos</option>
+          <option value="eggs">Huevo</option>
+      </select>
      <br>
+  </div>  
 
-  <label>Nombre:</label>
+  <div class="form-group">
+  <label>¿Cómo lo llamarías?</label>
   <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
   <br>
+  </div>
 
-  <label>Ingredientes:</label>
+  <div class="form-group">
+  <label>¿Qué ingredientes lleva?</label>
   <textarea class="form-control" v-model="recipe" type="text" name="recipe" id="recipe" required/>
   <br>
+  </div>
 
-  <label>Restaurant:</label>
+  <div class="form-group">
+  <label>¿Lo preparan en algún restaurant? Dinos cuál...</label>
   <input class="form-control" v-model="restaurant" type="text" name="restaurant" id="restaurant" required/>
   <br>
+  </div>
 
   <button class="btn btn-primary" type="submit">Editar</button>
 
 </form>
-</div>
+
 
 </template>
 
