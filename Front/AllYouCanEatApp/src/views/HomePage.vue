@@ -19,6 +19,7 @@
                 <p>Compartir un plato nuevo</p>
             </RouterLink> 
         </li>
+        
         <li>
             <a ref="#">¿Qué hacer en caso de intoxicación?</a>
         </li>

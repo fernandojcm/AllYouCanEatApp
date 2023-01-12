@@ -6,6 +6,8 @@ import CreateDishPage from '../views/CreateDishPage.vue'
 import CreateAccountPage from '../views/CreateAccountPage.vue'
 import HomePage from '../views/HomePage.vue'
 import AllergensPage from '../views/AllergensPage.vue'
+import DeleteDishPage from '../views/DeleteDishPage.vue'
+import UpdateDishPage from '../views/UpdateDishPage.vue'
 
 
   const routes = [
@@ -33,6 +35,16 @@ import AllergensPage from '../views/AllergensPage.vue'
       path: '/dishes/dish/created',
       name: 'createDish',
       component: CreateDishPage
+    },
+    {
+      path: '/dishes/dish/updated',
+      name: 'updateDish',
+      component: UpdateDishPage
+    },
+    {
+      path: '/dishes/dish/deleted',
+      name: 'deleteDish',
+      component: DeleteDishPage
     },
     {
       path: '/allergen',

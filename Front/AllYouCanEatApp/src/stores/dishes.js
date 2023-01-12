@@ -56,6 +56,22 @@ export const useDishesStore = defineStore("dishes", {
       } catch (error){
         console.log(error);
       }
+    },
+
+    async deleteDish(id){
+      try{
+        const requestOptions = {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        };
+
+        await fetch(`http://localhost:8080/dishes/${id}`, requestOptions);
+      } catch (error){
+        console.log(error);
+      }
     }
     
   },

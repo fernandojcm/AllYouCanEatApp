@@ -1,4 +1,6 @@
 <template>
+<HeaderComponent></HeaderComponent>
+
     <div>
         <h3>Comparte un nuevo plato</h3>
      
@@ -35,8 +37,13 @@
     import { mapState, mapActions } from "pinia";
     import { useDishesStore } from "../stores/dishes.js";
     import router from '../router'
+    import HeaderComponent from '../components/HeaderComponent.vue'
+    
 
     export default {
+      components: {
+        HeaderComponent
+      },
       data() {
         return {
           allergen: "",
@@ -62,7 +69,7 @@
      // Use pinia store method    
       //this.createDish(this.allergen, this.name, this.recipe, this.restaurant);
     
-      console.log(this.anotherVar);
+      //console.log(this.anotherVar);
     
       }
     }

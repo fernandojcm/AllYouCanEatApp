@@ -31,7 +31,7 @@ export default {
     }
   },
   computed: {    
-     // gives read access to this.countries and this.anotherVar
+     // gives read access to this.dishes and this.anotherVar
     ...mapState(useDishesStore, ['dishes', 'anotherVar'])
   },
   methods: {    
@@ -42,7 +42,7 @@ export default {
     // Use pinia store method    
     this.fetchAll();
     
-    console.log(this.anotherVar);
+    //console.log(this.anotherVar);
     
   }
 }

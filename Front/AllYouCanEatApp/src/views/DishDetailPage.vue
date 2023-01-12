@@ -1,4 +1,5 @@
 <template>
+<HeaderComponent></HeaderComponent>
 <h2>All You Can Eat</h2>
 <div v-if="dish" :key="dish.id">
 
@@ -9,14 +10,27 @@
     <p>{{ dish.restaurant }}</p>
 
 </div>
+
+<RouterLink to="/dishes/dish/updated">
+  <p>Editar este plato</p>
+</RouterLink>
+
+<RouterLink to="/dishes/dish/deleted">
+    <p>Eliminar este plato</p>
+</RouterLink> 
+
 </template>
 
 <script>
 
 import { mapState, mapStores, mapActions } from "pinia";
-  import { useDishesStore } from "../stores/dishes.js";
+import { useDishesStore } from "../stores/dishes.js";
+import HeaderComponent from "../components/HeaderComponent.vue";
 
   export default {
+    components:{
+      HeaderComponent 
+    },
     data() {
       return {
         dishFetch: {},
