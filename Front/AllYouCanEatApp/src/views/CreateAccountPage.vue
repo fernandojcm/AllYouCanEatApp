@@ -1,4 +1,5 @@
 <template>
+  <HeaderComponent></HeaderComponent>
     <div>
         <h3>Crea un perfil nuevo</h3>
      
@@ -30,8 +31,14 @@
     <script>
     import { mapState, mapActions } from "pinia";
     import { useProfilesStore } from "../stores/profiles.js";
+    import HeaderComponent from "../components/HeaderComponent.vue";
+    import router from '../router'
+    
     
     export default {
+      components: {
+        HeaderComponent
+      },
       data() {
         return {
           allergen: "",
@@ -49,11 +56,12 @@
             handleSubmit(){
                 console.log("El botón ha sido pulsado")
                 this.createProfile(this.allergen, this.name, this.password)
+                router.push("/home")
             }
          },
           async mounted() {
          // Use pinia store method    
-         this.createProfile(this.allergen, this.name, this.password);
+         //this.createProfile(this.allergen, this.name, this.password);
         
           console.log(this.anotherVar);
         

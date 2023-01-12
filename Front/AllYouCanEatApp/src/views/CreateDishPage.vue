@@ -33,7 +33,8 @@
     
     <script>
     import { mapState, mapActions } from "pinia";
-    import { useDishesStore } from "../stores/counter.js";
+    import { useDishesStore } from "../stores/dishes.js";
+    import router from '../router'
 
     export default {
       data() {
@@ -54,11 +55,12 @@
         handleSubmit(){
             console.log("El botón ha sido pulsado")
             this.createDish(this.allergen, this.name, this.recipe, this.restaurant)
+            router.push("/home")
         }
      },
       async mounted() {
      // Use pinia store method    
-        this.createDish(this.allergen, this.name, this.recipe, this.restaurant);
+      //this.createDish(this.allergen, this.name, this.recipe, this.restaurant);
     
       console.log(this.anotherVar);
     

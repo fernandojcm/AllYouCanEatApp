@@ -14,6 +14,12 @@ export const useDishesStore = defineStore("dishes", {
       this.dishes = dishesFetch
     },
 
+    async fetchAllByAllergen(allergen) {
+      const response = await fetch(`http://localhost:8080/dishes/allergen/${allergen}`)
+      const dishesFetch = await response.json()
+      this.dishes = dishesFetch
+    },
+
     async fetchOne(id) {
       const response = await fetch(`http://localhost:8080/dishes/${id}`);
       const dishFetch = await response.json();

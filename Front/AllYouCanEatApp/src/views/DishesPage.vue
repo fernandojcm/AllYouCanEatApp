@@ -1,4 +1,5 @@
 <template>
+<HeaderComponent></HeaderComponent>
 <h2>All You Can Eat</h2>
 
 <div>
@@ -20,10 +21,14 @@
 
 <script>
 import { mapState, mapActions } from "pinia";
-import { useDishesStore } from "../stores/counter.js";
-import CreateDishComponent from "../components/CreateDishComponent.vue";
+import { useDishesStore } from "../stores/dishes.js";
+import HeaderComponent from "../components/HeaderComponent.vue";
+
  
-export default {  
+export default { 
+    components: {
+        HeaderComponent
+    },
   data() {
     return {
       dishesFetch: [],      

@@ -14,7 +14,7 @@
 <script>
 
 import { mapState, mapStores, mapActions } from "pinia";
-  import { useDishesStore } from "../stores/counter.js";
+  import { useDishesStore } from "../stores/dishes.js";
 
   export default {
     data() {
