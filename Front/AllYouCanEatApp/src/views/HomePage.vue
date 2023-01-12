@@ -10,7 +10,7 @@
             </RouterLink>
         </li>
         <li>
-            <RouterLink to="/allergens">
+            <RouterLink to="/allergen">
                 <p>Ver los platos por alérgenos</p>
             </RouterLink>
         </li>

@@ -5,7 +5,7 @@
      
         <form @submit.prevent="handleSubmit">
     
-            <select v-model="allergen" name="allergens" id="allergens" required>
+            <select class="custom-select" v-model="allergen" name="allergens" id="allergens" required>
                 <option disabled>¿A qué eres alérgico(a)?</option>
                 <option value="gluten">Gluten</option>
                 <option value="lactose">Lactosa</option>
@@ -16,14 +16,14 @@
              <br>
     
           <label>Nombre:</label>
-          <input v-model="name" type="text" name="name" id="name" required/>
+          <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
           <br>
      
           <label>Password:</label>
-          <input v-model="password" type="password" name="password" id="password" required/>
+          <input class="form-control" v-model="password" type="password" name="password" id="password" required/>
           <br>
      
-          <button type="submit">Crear perfil</button>
+          <button class="btn btn-primary" type="submit">Crear perfil</button>
         </form>
       </div>
     </template>

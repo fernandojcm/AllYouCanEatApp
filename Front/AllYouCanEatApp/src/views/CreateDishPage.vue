@@ -15,18 +15,18 @@
              <br>
     
           <label>Nombre:</label>
-          <input v-model="name" type="text" name="name" id="name" required/>
+          <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
           <br>
 
           <label>Ingredientes:</label>
-          <input v-model="recipe" type="text" name="recipe" id="recipe" required/>
+          <textarea class="form-control" v-model="recipe" type="text" name="recipe" id="recipe" required/>
           <br>
 
           <label>Restaurant:</label>
-          <input v-model="restaurant" type="text" name="restaurant" id="restaurant" required/>
+          <input class="form-control" v-model="restaurant" type="text" name="restaurant" id="restaurant" required/>
           <br>
      
-          <button type="submit">Compartir</button>
+          <button class="btn btn-primary" type="submit">Compartir</button>
         </form>
       </div>
     </template>

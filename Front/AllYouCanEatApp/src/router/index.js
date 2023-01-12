@@ -6,7 +6,6 @@ import CreateDishPage from '../views/CreateDishPage.vue'
 import CreateAccountPage from '../views/CreateAccountPage.vue'
 import HomePage from '../views/HomePage.vue'
 import AllergensPage from '../views/AllergensPage.vue'
-import RestaurantsPage from '../views/RestaurantsPage.vue'
 
 
   const routes = [
@@ -36,7 +35,7 @@ import RestaurantsPage from '../views/RestaurantsPage.vue'
       component: CreateDishPage
     },
     {
-      path: '/allergens',
+      path: '/allergen',
       name: 'allergens',
       component: AllergensPage
     },

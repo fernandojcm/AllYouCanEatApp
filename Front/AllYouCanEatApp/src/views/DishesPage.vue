@@ -6,15 +6,11 @@
     <div v-if="dishes" v-for="dish in dishes" :key="dish.id">
       
         <RouterLink :to="`/dishes/${dish.id}`">
-            <h3>{{ dish.name }}</h3>
+          <p>{{ dish.name }}</p>
         </RouterLink>
 
     </div>
-    <div>
-        <RouterLink to="/dishes/dish/created">
-            <p>¿Quieres compartir un plato nuevo?</p>
-        </RouterLink>
-    </div>
+    
 </div>
 
 </template>
