@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-color">
     <ul class="nav-list">
       <li>AllYouCanEat</li>
       <li>
@@ -22,5 +22,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size:medium;
+  padding-right: 20px;
+  background-color: rgb(146, 127, 103);
 }
 </style>
