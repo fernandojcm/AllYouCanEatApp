@@ -1,49 +1,65 @@
 <template>
-<HeaderComponent></HeaderComponent>
+  <HeaderComponent></HeaderComponent>
 
-
-<form @submit.prevent="handleSubmit">
-  
-  <div class="form-group">
-  <label>ID:</label>
-  <input class="form-control" v-model="id" type="text" name="id" id="id" required/>
-  <br> 
-  </div> 
-    
-  <div class="form-group">
-    <label for="allergens">Selecciona una alergia</label>
-    <select class="form-control" v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos" required>
-          <option disabled>Selecciona un alérgeno</option>
-          <option value="gluten">Gluten</option>
-          <option value="lactose">Lactosa</option>
-          <option value="seafood">Crustáceos y moluscos</option>
-          <option value="nuts">Frutos secos</option>
-          <option value="eggs">Huevo</option>
-      </select>
-     <br>
-  </div>  
-
-  <div class="form-group">
-  <label>¿Cómo lo llamarías?</label>
-  <input class="form-control" v-model="name" type="text" name="name" id="name" required/>
-  <br>
+  <div class="img-center">
+    <img src="../assets/images/GLUTEN-COLOR.png" alt="nuts icon" class="icons">
+    <img src="../assets/images/LACTICS-COLOR.png" alt="nuts icon" class="icons">
+    <img src="../assets/images/CRUSTACIS-COLOR.png" alt="nuts icon" class="icons">
+    <img src="../assets/images/MOLUSCS-COLOR.png" alt="nuts icon" class="icons">
+    <img src="../assets/images/FRUITSSECS-COLOR.png" alt="nuts icon" class="icons">
+    <img src="../assets/images/OUS-COLOR.png" alt="nuts icon" class="icons">
   </div>
 
-  <div class="form-group">
-  <label>¿Qué ingredientes lleva?</label>
-  <textarea class="form-control" v-model="recipe" type="text" name="recipe" id="recipe" required/>
-  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col align-self-center">
+        <form class="form-signin" @submit.prevent="handleSubmit">
+          <h3>Edita este plato</h3>
+          <div class="form-group">
+            <label>Indica el ID</label>
+            <input class="form-control" v-model="id" type="text" name="id" id="id" required />
+            <br>
+          </div>
+
+          <div class="form-group">
+            <label for="allergens">Selecciona una alergia</label>
+            <select class="form-control" v-model="allergen" name="allergens" id="allergens" placeholder="Alérgenos"
+              required>
+              <option disabled>Selecciona un alérgeno</option>
+              <option value="gluten">Gluten</option>
+              <option value="lactose">Lactosa</option>
+              <option value="seafood">Crustáceos y moluscos</option>
+              <option value="nuts">Frutos secos</option>
+              <option value="eggs">Huevo</option>
+            </select>
+            <br>
+          </div>
+
+          <div class="form-group">
+            <label>¿Cómo lo llamarías?</label>
+            <input class="form-control" v-model="name" type="text" name="name" id="name" required />
+            <br>
+          </div>
+
+          <div class="form-group">
+            <label>¿Qué ingredientes lleva?</label>
+            <textarea class="form-control" v-model="recipe" type="text" name="recipe" id="recipe" required />
+            <br>
+          </div>
+
+          <div class="form-group">
+            <label>¿Lo preparan en algún restaurant? Dinos cuál...</label>
+            <input class="form-control" v-model="restaurant" type="text" name="restaurant" id="restaurant" required />
+            <br>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Editar</button>
+
+        </form>
+      </div>
+    </div>
   </div>
 
-  <div class="form-group">
-  <label>¿Lo preparan en algún restaurant? Dinos cuál...</label>
-  <input class="form-control" v-model="restaurant" type="text" name="restaurant" id="restaurant" required/>
-  <br>
-  </div>
-
-  <button class="btn btn-primary" type="submit">Editar</button>
-
-</form>
 
 
 </template>
@@ -55,40 +71,41 @@ import router from '../router'
 import HeaderComponent from '../components/HeaderComponent.vue';
 
 export default {
-    components: {
-        HeaderComponent
-    },
-    data() {
-        return {
-          id:"",  
-          allergen: "",
-          name: "",
-          recipe: "",
-          restaurant: ""
-        }
-      },
-      computed: {    
-     // gives read access to this.dishes and this.anotherVar
-        ...mapState(useDishesStore, ['dishes', 'anotherVar'])
-     },
-      methods: {    
-     // gives access to this.createDish()
-        ...mapActions(useDishesStore, ['updateDish']),
-        handleSubmit(){
-            console.log("El botón ha sido pulsado")
-            this.updateDish(this.id, this.allergen, this.name, this.recipe, this.restaurant)
-            router.push("/home")
-        }
-     },
-      async mounted() {
-     // Use pinia store method    
-      //this.createDish(this.id, this.allergen, this.name, this.recipe, this.restaurant);
-    
-      //console.log(this.anotherVar);
-    
-      }
+  components: {
+    HeaderComponent
+  },
+  data() {
+    return {
+      id: "",
+      allergen: "",
+      name: "",
+      recipe: "",
+      restaurant: ""
+    }
+  },
+  computed: {
+    // gives read access to this.dishes and this.anotherVar
+    ...mapState(useDishesStore, ['dishes', 'anotherVar'])
+  },
+  methods: {
+    // gives access to this.createDish()
+    ...mapActions(useDishesStore, ['updateDish']),
+    handleSubmit() {
+      console.log("El botón ha sido pulsado")
+      this.updateDish(this.id, this.allergen, this.name, this.recipe, this.restaurant)
+      router.push("/home")
+    }
+  },
+  async mounted() {
+    // Use pinia store method    
+    //this.createDish(this.id, this.allergen, this.name, this.recipe, this.restaurant);
+
+    //console.log(this.anotherVar);
+
+  }
 }
 </script>
 
 <style>
+
 </style>

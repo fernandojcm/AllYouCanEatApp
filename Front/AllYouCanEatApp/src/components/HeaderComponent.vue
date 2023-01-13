@@ -1,29 +1,26 @@
 <template>
-<div>
-<ul class="nav">
-    <li>
-    <RouterLink to="/home">
-        <p>Home</p>
-    </RouterLink>
-    </li>
-    <li>
-        <a href="#">About</a>
-    </li>
-    
-</ul>
-</div>
+  <nav>
+    <ul class="nav-list">
+      <li>AllYouCanEat</li>
+      <li>
+        <RouterLink class="router" to="/home">
+          <p><span class="glyphicon glyphicon-home"></span> Inicio </p>
+        </RouterLink>
+      </li>
+    </ul>
+
+  </nav>
 </template>
 
 <script>
-export default {
-    name: 'Header'
-}
 </script>
 
 <style>
-.nav{
-    list-style: none;
-    flex-direction: row;
-    justify-content: end;
+.nav-list{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size:medium;
 }
 </style>
