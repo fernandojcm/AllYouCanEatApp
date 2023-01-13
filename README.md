@@ -43,5 +43,4 @@ Single-Page application: Bootstrap: 5.2.2, Pinia: 2.0.28, Vue: 3.2.45, Vue-route
 <img width="519" alt="UML - AllYouCanEat" src="https://user-images.githubusercontent.com/100947141/212232491-16b487cf-8f79-4e53-b227-82885d801444.png">
 
 ### Class Diagram
-<img width="521" alt="Captura de Pantalla 2023-01-13 a las 4 19 53" src="https://user-images.githubusercontent.com/100947141/212232532-694a7e32-b07a-418e-b3dd-491360def30f.png">
-
+<img width="521" alt="Class diagram - AllYouCanEat" src="https://user-images.githubusercontent.com/100947141/212232739-e66463db-25e3-41e4-82da-ba188f824b07.png">
