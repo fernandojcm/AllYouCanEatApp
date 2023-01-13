@@ -31,18 +31,19 @@
                     <button class="btn btn-primary" type="submit">Iniciar sesión</button>
                     <br>
                 </form>
+                <div class="img-center">
+                    <div>
+                        <RouterLink class="router" to="/profiles/profile/created">
+                            <p>¿No tienes cuenta? Aquí puedes crear una nueva</p>
+                        </RouterLink>
 
-                <div>
-                    <RouterLink class="router" to="/profiles/profile/created">
-                        <p>¿No tienes cuenta? Aquí puedes crear una nueva</p>
-                    </RouterLink>
+                    </div>
+                    <div>
+                        <RouterLink class="router" to="/dishes">
+                            <p>¡Solo quiero echar un vistazo a los platos!</p>
+                        </RouterLink>
 
-                </div>
-                <div>
-                    <RouterLink class="router" to="/dishes">
-                        <p>¡Solo quiero echar un vistazo a los platos!</p>
-                    </RouterLink>
-
+                    </div>
                 </div>
             </div>
         </div>

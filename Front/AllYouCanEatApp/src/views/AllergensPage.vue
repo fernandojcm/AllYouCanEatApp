@@ -22,7 +22,7 @@
             </option>
           </select>
           <br>
-          <button class="btn btn-primary" @click="showDishes">Mostrar</button>
+          <button class="btn btn-primary" @click="showDishes">Filtrar</button>
           <br>
         </div>
 

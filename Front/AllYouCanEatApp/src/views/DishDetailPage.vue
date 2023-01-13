@@ -15,10 +15,12 @@
         <div v-if="dish" :key="dish.id">
 
           <h2 class="text-center">{{ dish.name }}</h2>
+          <div class="img-center">
           <h3>Estos son los ingredientes:</h3>
           <p>{{ dish.recipe }}</p>
           <h3 v-if="dish.restaurant">Y lo preparan en este restaurant:</h3>
           <p>{{ dish.restaurant }}</p>
+         </div>
 
         </div>
         <div class="text-center">
