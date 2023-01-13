@@ -1,10 +1,13 @@
 # AllYouCanEatApp
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicación que permite a los usuarios con alergias alimentarias consultar platos cotidianos adaptados a sus nuevas condiciones alimentarias y en qué restaurantes pueden comerlos. 
+
+Compuesta por una Single-Page Application hecha con Vue.js que se comunica una API REST hecha con Java/SpringBoot y un microservicio de los que consume los datos para su correcto funcionamiento.
+
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) 
 
 ## Customize configuration
 
@@ -27,3 +30,17 @@ npm run dev
 ```sh
 npm run build
 ```
+### Technical Specifications
+
+API REST: Java version 19 Spring Boot 2.7.6 Maven 4.0 JPA y Hibernate.
+
+Microservicio: Java 17 y Spring Boot 2.7.7.
+
+Single-Page application: Bootstrap: 5.2.2, Pinia: 2.0.28, Vue: 3.2.45, Vue-router: 4.1.6
+
+### Use Case Diagram
+
+
+
+### Class Diagram
+
